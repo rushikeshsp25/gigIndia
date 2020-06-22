@@ -18,7 +18,7 @@ export default class SheetIdAdd extends React.Component {
     render(){
         return(
             <div className="input-wrapper">
-                <p>Enter Google Sheet ID : </p><input onChange={this.handleInputChange} type="text"></input>
+                <p>Enter Google Sheet ID ( make sure it is public ) : </p><input onChange={this.handleInputChange} type="text"></input>
                 <button onClick={this.handleSubmit}>Display Data</button>
             </div>
         )

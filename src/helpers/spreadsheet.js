@@ -1,10 +1,10 @@
 import config from "../config";
 
-export function loadSpreadSheet(callback) {
+export function loadSpreadSheet(callback, spreadsheetId) {
     window.gapi.client.load("sheets", "v4", () => {
         window.gapi.client.sheets.spreadsheets.values
             .get({
-                spreadsheetId: config.spreadsheetId,
+                spreadsheetId: spreadsheetId || config.spreadsheetId,
                 range: "Sheet1!A1:F9"
             })
             .then(

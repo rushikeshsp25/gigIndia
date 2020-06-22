@@ -41,7 +41,8 @@ class App extends React.Component {
 
   getSheetId(id){
     console.log("Sheet ID received : ",id)
-    this.setState({sheetId:id});
+    loadSpreadSheet(this.onLoad,id);
+    // this.setState({sheetId:id});
   }
   render() {
     return (
